@@ -16,6 +16,19 @@ namespace BikeRent
 
         public Bill(string buyer, string dir, string phone)
         {
+            if(String.IsNullOrWhiteSpace(buyer))
+            {
+                throw new ArgumentNullException("buyer");
+            }
+            if(String.IsNullOrWhiteSpace(dir))
+            {
+                throw new ArgumentNullException("dir");
+            }
+            if(String.IsNullOrWhiteSpace(phone))
+            {
+                throw new ArgumentNullException("phone");
+            }
+
             Buyer = buyer;
             Direction = dir;
             PhoneNumber = phone;
@@ -30,6 +43,16 @@ namespace BikeRent
 
             subtotal += item.SubTotal;
             iva = subtotal * RentConst.Iva;
+
+            // Promotion
+            if (items.Count >= 3 && items.Count <= 5)
+            {
+                discount = RentConst.FamilyRental;
+            }
+            else
+            {
+                discount = 0;
+            }
 
             return items.Count;
         }
@@ -50,21 +73,22 @@ namespace BikeRent
                 subtotal += it.SubTotal;
             }
             iva = subtotal * RentConst.Iva;
-        }
 
-        public float SubTotal => subtotal;
-        public float Discount => discount * subtotal;
-        public float Iva => iva;
-        public float Total()
-        {
             // Promotion
             if (items.Count >= 3 && items.Count <= 5)
             {
                 discount = RentConst.FamilyRental;
             }
-
-            return subtotal - Discount + Iva;
+            else
+            {
+                discount = 0;
+            }
         }
+
+        public float SubTotal => subtotal;
+        public float Discount => discount * subtotal;
+        public float Iva => iva;
+        public float Total => subtotal - Discount + iva;
         public string Name => Buyer;
         public string Address => Direction;
         public string Contact => PhoneNumber;

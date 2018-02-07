@@ -7,12 +7,12 @@ namespace BikeRent
     {
         public Rent(float amount, string desc, RentType type)
         {
-            if(amount < 0)
+            if(amount <= 0)
             {
-                throw new ArgumentOutOfRangeException("amount", "Can't be less than 0");
+                throw new ArgumentOutOfRangeException("amount", "Can't be less or equal to 0");
             }
 
-            if(String.IsNullOrEmpty(desc))
+            if(String.IsNullOrWhiteSpace(desc))
             {
                 throw new ArgumentNullException("desc", "Can't be null or empty");
             }
