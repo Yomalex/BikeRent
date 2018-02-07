@@ -105,5 +105,20 @@ namespace RentTest
             var bill = new Bill("Mr Camejo Yomar", "Ecuador", "");
             bill.Add(0, "Bike", RentType.Hour);
         }
+
+        [TestMethod]
+        public void TestInvalidBill_AddRemove()
+        {
+            float amount = 5.0f;//h
+            float expected = 25.0f * 1.21f;
+            float actual = 0;
+            var bill = new Bill("Mr Camejo Yomar", "Ecuador", "+593962923518");
+            bill.Add(amount, "Bike green", RentType.Hour);
+            bill.Add(amount, "Bike white", RentType.Hour);
+            bill.Remove(2);
+            bill.Remove(2);
+            actual = bill.Total;
+            Assert.AreEqual(expected, actual, 0.0001);
+        }
     }
 }
