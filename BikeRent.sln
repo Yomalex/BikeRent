@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeRent", "BikeRent\BikeRent.csproj", "{B41D7151-205E-481C-A483-CB0E2823C2DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BikeRent", "BikeRent\BikeRent.csproj", "{B41D7151-205E-481C-A483-CB0E2823C2DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentTest", "RentTest\RentTest.csproj", "{AD267DA1-ACF0-4E30-8887-69F53B1E1562}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentTest", "RentTest\RentTest.csproj", "{C7B54AEC-2F83-4023-8966-B7AA2D0E79E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{B41D7151-205E-481C-A483-CB0E2823C2DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B41D7151-205E-481C-A483-CB0E2823C2DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B41D7151-205E-481C-A483-CB0E2823C2DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AD267DA1-ACF0-4E30-8887-69F53B1E1562}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AD267DA1-ACF0-4E30-8887-69F53B1E1562}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AD267DA1-ACF0-4E30-8887-69F53B1E1562}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AD267DA1-ACF0-4E30-8887-69F53B1E1562}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7B54AEC-2F83-4023-8966-B7AA2D0E79E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7B54AEC-2F83-4023-8966-B7AA2D0E79E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7B54AEC-2F83-4023-8966-B7AA2D0E79E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7B54AEC-2F83-4023-8966-B7AA2D0E79E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

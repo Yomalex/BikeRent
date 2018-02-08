@@ -13,5 +13,54 @@ Debido a que el contexto da solo indicaciones de como es el funcionamiento de la
 La clase 'Bill' se encarga de la agrupacion de las rentas individuales representadas por la clase 'Rent', 'Bill' tambien se encarga de la aplicacion de la promocion 'Family Rental'.
 Por motivos de indole fiscal se asume que es de caracter minimo y obligatorio suministrar 'Nombre', 'Dirección' y 'Número de contacto', de igual forma al rentar el operador debe indicar una identificación del vehículo por motivos de seguridad.
 
+Para tener un respaldo de los alquileres, a quien se realizaron y en que momento se propone la realizacion de una base de datos estructurada de la siguiente forma.
+Pensada para tener un control de las Bikes, a quien fueron rentadas, quien fue el encargado y por cuanto tiempo. 
+BikeRental.dbo
+
+Bikes
+ID (Primary Key)
+plate 
+mark
+model
+color
+year
+free
+
+Bills
+ID (Primary Key)
+Cashier [Users.ID]
+Client [Clients.ID]
+Date
+SubTotal
+Discount
+Iva
+Total
+
+Rents
+ID (Primary Key)
+Bill [Bills.ID]
+Bike [Bikes.ID]
+amount
+type
+date
+
+Clients
+ID (Primary Key)
+DNI
+Name
+Last_Name
+Address
+Phone
+Date
+
+Users
+ID
+DNI
+Name
+Last_Name
+Address
+Phone
+Data
+
 
 ## Runing Tests

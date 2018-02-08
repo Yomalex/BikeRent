@@ -65,6 +65,7 @@ namespace RentTest
         }
 
         [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void TestInvalidBill_Amount()
         {
             var bill = new Bill("Mr Camejo Yomar", "Ecuador", "+593962923518");
@@ -72,6 +73,7 @@ namespace RentTest
         }
 
         [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
         public void TestInvalidBill_Desc()
         {
             var bill = new Bill("Mr Camejo Yomar", "Ecuador", "+593962923518");
@@ -79,6 +81,7 @@ namespace RentTest
         }
 
         [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void TestInvalidBill_Amount_Zero()
         {
             var bill = new Bill("Mr Camejo Yomar", "Ecuador", "+593962923518");
@@ -86,6 +89,7 @@ namespace RentTest
         }
 
         [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
         public void TestInvalidBill_Argument_1()
         {
             var bill = new Bill("", "Ecuador", "+593962923518");
@@ -93,6 +97,7 @@ namespace RentTest
         }
 
         [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
         public void TestInvalidBill_Argument_2()
         {
             var bill = new Bill("Mr Camejo Yomar", "", "+593962923518");
@@ -100,6 +105,7 @@ namespace RentTest
         }
 
         [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
         public void TestInvalidBill_Argument_3()
         {
             var bill = new Bill("Mr Camejo Yomar", "Ecuador", "");
@@ -107,6 +113,7 @@ namespace RentTest
         }
 
         [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void TestInvalidBill_AddRemove()
         {
             float amount = 5.0f;//h
