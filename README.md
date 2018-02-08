@@ -27,13 +27,12 @@ Por motivos de indole fiscal se asume que es de caracter minimo y obligatorio su
 ## La clase bill posee la siguente estructura:
 
 ### Constructor:
-Bill(string name, string dir, string phone), requiere 3 argumentos obligatorios no null, no blank y no whitespaced
+**Bill(string name, string dir, string phone)**: requiere 3 argumentos obligatorios no null, no blank y no whitespaced
 
 ### Methods:
-**int Add(float amount, string desc, RentType type)**, Amount es la cantidad de horas/dias/semanas, desc esta relacionado al vehiculo y type es el modo de renta hora/dia/semana
+* **int Add(float amount, string desc, RentType type)**: Amount es la cantidad de horas/dias/semanas, desc esta relacionado al vehiculo y type es el modo de renta hora/dia/semana
 **Return value**: devuelve la cantidad de elementos en lista.
-
-**void Remove(int Index)**, index >= 1 y ademas debe ser menor o igual a la cantidad de elementos agregados a bill. Remueve el elemento en esa posicion.
+* **void Remove(int Index)**: index >= 1 y ademas debe ser menor o igual a la cantidad de elementos agregados a bill. Remueve el elemento en esa posicion.
 **Return value**: void. 
 
 ### Properties:
@@ -48,7 +47,7 @@ Bill(string name, string dir, string phone), requiere 3 argumentos obligatorios 
 ## La clase 'Rent' posee la siguente structura:
 
 ### Constructor:
-Rent(float amount, string desc, RentType type), amount debe ser > 0, desc debe ser != null
+**Rent(float amount, string desc, RentType type)**: amount debe ser > 0, desc debe ser != null
 
 ### Properties:
 * **string Description** *(read-only)*: Descripcion del vehiculo.
