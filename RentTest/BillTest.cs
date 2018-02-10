@@ -11,7 +11,7 @@ namespace RentTest
         public void TestValidBill()
         {
             float amount = 5.0f;//h
-            float expected = 25.0f*1.21f;
+            float expected = 25.0f;
             float actual = 0;
             var bill = new Bill("Mr Camejo Yomar", "Ecuador", "+593962923518");
             bill.Add(amount, "Bike", RentType.Hour);
@@ -23,7 +23,7 @@ namespace RentTest
         public void TestValidPromoBill()
         {
             float amount = 3.0f; //day family weekend
-            float expected = 20.0f * 3.0f * 3.0f * (1.0f + 0.21f - 0.3f);
+            float expected = 20.0f * 3.0f * 3.0f * (1.0f - 0.3f);
             float actual;
             var bill = new Bill("Mr Camejo Yomar", "Ecuador", "+593962923518");
             bill.Add(amount, "Bike black", RentType.Day);
@@ -37,7 +37,7 @@ namespace RentTest
         public void TestValidBill_AddRemove()
         {
             float amount = 5.0f;//h
-            float expected = 25.0f * 1.21f;
+            float expected = 25.0f ;
             float actual = 0;
             var bill = new Bill("Mr Camejo Yomar", "Ecuador", "+593962923518");
             bill.Add(amount, "Bike green", RentType.Hour);
@@ -51,7 +51,7 @@ namespace RentTest
         public void TestValidNoPromoBill()
         {
             float amount = 3.0f; //day family weekend
-            float expected = 20.0f * 3.0f * 6.0f * (1.0f + 0.21f);
+            float expected = 20.0f * 3.0f * 6.0f;
             float actual;
             var bill = new Bill("Mr Camejo Yomar", "Ecuador", "+593962923518");
             bill.Add(amount, "Bike black", RentType.Day);
@@ -117,7 +117,7 @@ namespace RentTest
         public void TestInvalidBill_AddRemove()
         {
             float amount = 5.0f;//h
-            float expected = 25.0f * 1.21f;
+            float expected = 25.0f;
             float actual = 0;
             var bill = new Bill("Mr Camejo Yomar", "Ecuador", "+593962923518");
             bill.Add(amount, "Bike green", RentType.Hour);

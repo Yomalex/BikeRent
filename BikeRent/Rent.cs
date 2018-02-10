@@ -46,8 +46,7 @@ namespace BikeRent
             { RentType.Day, 20.0f },
             { RentType.Week, 60.0f },
         };
-
-        public const float Iva = 0.21f;
+        
         public const float FamilyRental = 0.3f;
     }
 }

@@ -38,7 +38,6 @@ Por motivos de indole fiscal se asume que es de caracter minimo y obligatorio su
 ### Properties:
 * **float SubTotal** *(read-only)*: retorna el total parcial de la factura.
 * **float Discount** *(read-only)*: retorna la cantidad total descontada al cliente.
-* **float Iva** *(read-only)*: retorna la cantidad que debe ser declarada por impuestos.
 * **flota Total** *(read-only)*: retorna la cantidad neta a pagar por el cliente.
 * **string Name** *(read-only)*: retorna a nombre de quien se encuentra la factura.
 * **string Address** *(read-only)*: retorna la direccion proporcionada por el cliente.
@@ -56,7 +55,7 @@ Por motivos de indole fiscal se asume que es de caracter minimo y obligatorio su
 * **float SubTotal** *(read-only)*: Costo.
 
 ## Clase RentConst
-Constantes utilizadas por las clases Rent y Bill, como son los porcentajes de Family Rent y Iva, tambien los costos de los modos de renta. 
+Constantes utilizadas por las clases Rent y Bill, como son los porcentajes de Family Rent, tambien los costos de los modos de renta. 
 
 
 # Runing Tests

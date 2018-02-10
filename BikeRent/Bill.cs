@@ -11,7 +11,6 @@ namespace BikeRent
         private string Direction;
         private string PhoneNumber;
         private float subtotal;
-        private float iva;
         private float discount;
 
         public Bill(string buyer, string dir, string phone)
@@ -42,7 +41,6 @@ namespace BikeRent
             items.Add(item);
 
             subtotal += item.SubTotal;
-            iva = subtotal * RentConst.Iva;
 
             // Promotion
             if (items.Count >= 3 && items.Count <= 5)
@@ -72,7 +70,6 @@ namespace BikeRent
             {
                 subtotal += it.SubTotal;
             }
-            iva = subtotal * RentConst.Iva;
 
             // Promotion
             if (items.Count >= 3 && items.Count <= 5)
@@ -87,8 +84,7 @@ namespace BikeRent
 
         public float SubTotal => subtotal;
         public float Discount => discount * subtotal;
-        public float Iva => iva;
-        public float Total => subtotal - Discount + iva;
+        public float Total => subtotal - Discount;
         public string Name => Buyer;
         public string Address => Direction;
         public string Contact => PhoneNumber;
